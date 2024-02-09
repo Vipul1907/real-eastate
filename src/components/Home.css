@@ -987,6 +987,7 @@
     position: relative;
     font-size: 62px;
     line-height: 62px;
+    /* justify-content: space-between; */
     font-family: var(--font-font-awesome-5-free);
     color: var(--color-royalblue);
   }
@@ -1051,14 +1052,16 @@
   }
   .faq {
     width: 1280px;
-    height: 376.75px;
+    height: 10px;
     padding: 0 var(--padding-221xl);
     box-sizing: border-box;
-    text-align: left;
+    /* text-align: left; */
     font-size: var(--h200-semi-size);
     color: var(--color-gray-400);
+    cursor: pointer;
   }
   .frame-parent11 {
+    /* min-height: 100vh; */
     position: absolute;
     top: 1070px;
     left: 103px;
@@ -1085,6 +1088,33 @@
     line-height: 20px;
     transform: rotate(180deg);
   }
+
+  .div {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-200xl);
+  }
+  .divfaq-box-question {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 15px rgba(0, 120, 255, 0.35);
+    /* flex-direction: column; */
+    align-items: center;
+    padding: var(--padding-xl) var(--padding-26xl);
+  }
+  .answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+  }
+  .answer p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+
+  }
   .ifa-solid {
     display: flex;
     flex-direction: row;
@@ -1092,24 +1122,6 @@
     justify-content: flex-end;
     font-size: var(--font-size-xl);
     font-family: var(--font-font-awesome-5-free);
-  }
-  .div,
-  .divfaq-box-question {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .div {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--gap-200xl);
-  }
-  .divfaq-box-question {
-    align-self: stretch;
-    background-color: var(--color-white);
-    box-shadow: 0 10px 15px rgba(0, 120, 255, 0.35);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: var(--padding-xl) var(--padding-26xl);
   }
   .how-does-osumare-measure-campa-parent {
     display: flex;
@@ -1126,8 +1138,7 @@
     left: 45px;
     z-index: 1;
   }
-  .divfaq-box,
-  .divfaq-box-question1 {
+  .divfaq-box {
     background-color: var(--color-white);
     display: flex;
     flex-direction: column;
@@ -1135,10 +1146,15 @@
     justify-content: flex-start;
   }
   .divfaq-box-question1 {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     align-self: stretch;
     box-shadow: 0 10px 15px rgba(0, 120, 255, 0.35);
     padding: var(--padding-xl) var(--padding-26xl);
-    position: relative;
+    /* position: relative; */
     gap: var(--gap-3xs);
   }
   .divfaq-box {
@@ -1182,8 +1198,17 @@
     display: inline-block;
     height: 117px;
   }
+  .faq.active .answer{
+    max-height: 300px;
+  }
 
+  .faq.active svg{
+    transform: rotate(180deg);
+  }
 
+  svg{
+    transition: transform 0.5s ease-in;
+  } 
 
 
 
@@ -1534,11 +1559,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    
   }
   .home-parent {
     gap: var(--gap-base);
     font-size: var(--body200-bold-size);
     color: var(--color-darkslategray);
+    cursor: pointer;
   }
   .menu-parent {
     position: absolute;
