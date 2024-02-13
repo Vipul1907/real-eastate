@@ -9,7 +9,7 @@ const Section7 = () => {
       <div className="expertise-frame mt">
         <div className="driving-property-inquiries-to-group">
           <b >Our Expertise in Action</b>
-          <div className="frame-parent3">
+          <div className="frame-parent5">
             <div className="icon-parent">
               <div className="icon">
                 <div className="icon-child" />

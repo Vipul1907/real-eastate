@@ -7,7 +7,6 @@ const Section10=()=>{
       {/* footer section */}
       <div className="frame-parent15">
         <div className="ellipse-parent">
-          <div className="frame-child9" />
           <div className="osamare-white-logo-parent">
             <div className="osamare-white-logo">
               <img
